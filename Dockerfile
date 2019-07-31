@@ -2,7 +2,7 @@ FROM golang:1.12-alpine AS builder
 ARG basedir=/go/build
 WORKDIR ${basedir}
 # Install some dependencies needed to build the project
-RUN apk add bash bzr ca-certificates git gcc g++ libc-dev
+#RUN apk add bash bzr ca-certificates git gcc g++ libc-dev
 
 # Force the go compiler to use modules
 #ENV GO111MODULE=on
