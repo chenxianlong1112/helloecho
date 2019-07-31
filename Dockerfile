@@ -5,10 +5,10 @@ WORKDIR ${basedir}
 RUN apk add bash bzr ca-certificates git gcc g++ libc-dev
 
 # Force the go compiler to use modules
-ENV GO111MODULE=on
-COPY go.mod .
-COPY go.sum .
-RUN go mod download
+#ENV GO111MODULE=on
+#COPY go.mod .
+#COPY go.sum .
+#RUN go mod download
 
 # Copy src and build
 ADD . ${basedir}
